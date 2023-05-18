@@ -88,7 +88,6 @@ const NavBer = () => {
                                 user?.email ?
                                     <span className='flex items-center'>
                                         <span title={user?.displayName}>
-
                                             {
                                                 user?.photoURL ?
                                                     <div>

@@ -7,13 +7,13 @@ import image4 from './../../../assets/images/slider/robot_banner3.jpg'
 const Banner = () => {
     const slider_text = [
         <>
-            <div data-aos="fade-right" className='text-white md:pl-28 pl-12 w-1/2 bg-[#3638381c] p-10 rounded-r-xl space-y-5'>
-                <h2 className='text-5xl font-Lobster font-semibold animate-text bg-gradient-to-r from-teal-500 via-purple-500 to-orange-500 bg-clip-text'>Robotics for kids has significantly time.</h2>
-                <p className='text-xl font-sans'>Robotics for kids is an educational field that introduces children to the concepts of robotics and programming. It aims to develop their problem-solving skills, critical thinking abilities, and creativity through hands-on activities and projects involving robots.
+            <div data-aos="fade-right" className='text-white md:pl-28 pl-8 md:w-1/2 w-full md:bg-[#3638381c] md:p-10 p-5 rounded-r-xl md:space-y-5 space-y-2'>
+                <h2 className='md:text-5xl text-2xl font-Lobster font-semibold'>Robotics for kids has significantly time.</h2>
+                <p className='md:text-xl font-sans hidden'>Robotics for kids is an educational field that introduces children to the concepts of robotics and programming. It aims to develop their problem-solving skills, critical thinking abilities, and creativity through hands-on activities and projects involving robots.
                 </p>
                 <div>
                     <button className='silder_btn'>Robot View</button>
-                    <button className='silder_btn1 ml-5'>Contact Now</button>
+                    <button className='silder_btn1 ml-5 hidden'>Contact Now</button>
                 </div>
             </div>
         </>
