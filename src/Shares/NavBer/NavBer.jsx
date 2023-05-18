@@ -1,10 +1,38 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from './../../assets/images/logo/robot_logo.png'
 import { Bars3BottomRightIcon, XMarkIcon } from '@heroicons/react/24/solid'
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
+import Swal from 'sweetalert2';
+import { FaUserAlt, FaUserAltSlash } from 'react-icons/fa';
+
 
 const NavBer = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    const { user, logOut } = useContext(AuthContext)
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => {
+                Swal.fire({
+                    position: 'top-center',
+                    icon: 'success',
+                    title: 'Sign out Successful..!',
+                    showConfirmButton: false,
+                    timer: 2500
+                })
+            })
+            .catch(error => {
+                console.error(error.message)
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: (error.message),
+                })
+            })
+    }
+
     return (
         <div className='bg-slate-200 py-2 sticky top-0 z-10'>
             <div className="my_container flex justify-between items-center">
@@ -56,11 +84,42 @@ const NavBer = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='login'
-                                className={({ isActive }) =>
-                                    (isActive ? 'active' : 'default')}>
-                                Login
-                            </NavLink>
+                            {
+                                user?.email ?
+                                    <span className='flex items-center'>
+                                        <span title={user?.displayName}>
+
+                                            {
+                                                user?.photoURL ?
+                                                    <div>
+                                                        <img 
+                                                        src={user?.photoURL} 
+                                                        alt="profile photo"
+                                                        className='w-12 h-12 rounded-full mr-3' />
+                                                    </div>
+                                                    :
+                                                    <span><FaUserAlt className='w-9 h-9' /> </span>
+                                            }
+                                        </span>
+                                        <button
+                                            onClick={handleLogOut}
+                                            className='logout_btn'>
+                                            LogOut
+                                        </button>
+                                    </span>
+                                    :
+                                    <span className='flex items-center'>
+                                        <span>
+                                            <FaUserAltSlash className='w-9 h-9 mx-3' />
+                                        </span>
+                                        <NavLink to='login'
+                                            className={({ isActive }) =>
+                                                (isActive ? 'active' : 'default')}>
+                                            Login
+                                        </NavLink>
+
+                                    </span>
+                            }
                         </li>
                     </ul>
                 </nav>

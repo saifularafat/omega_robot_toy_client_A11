@@ -11,7 +11,7 @@ const Login = () => {
     const { signIn } = useContext(AuthContext);
 
     const handlerLogin = e => {
-        e.preventDefault();
+        e.preventDefault(); 
         const from = e.target;
         const email = from.email.value;
         const password = from.password.value;
@@ -75,7 +75,7 @@ const Login = () => {
 
                                 {/* <SocialLogin /> */}
                                 <Social />
-                                
+
                                 <p className='text-center text-lg font-open'>Have an account?
                                     <Link to='/register'>
                                         <span className='text-title-color font-semibold hover:underline'> register

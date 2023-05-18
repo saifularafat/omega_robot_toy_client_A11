@@ -14,23 +14,26 @@
     @apply bg-transparent text-xl text-service-title font-open font-semibold tracking-wide py-3 px-4 rounded-lg
 }
 
+.logout_btn {
+    @apply text-xl text-white py-2 px-4 border font-open font-semibold rounded-xl
+    bg-gradient-to-r from-btn-color2 to-btn-color1 
+}
+
 .main_btn {
-    @apply bg-gradient-to-r from-btn-color1 to-btn-color2
-    text-2xl py-2 px-6 rounded-lg border border-btn-color2
-    font-semibold text-white tracking-wide cursor-pointer transition duration-200
+    @apply bg-gradient-to-r from-btn-color1 to-btn-color2 text-2xl py-2 px-6 rounded-lg border border-btn-color2 font-semibold text-white tracking-wide cursor-pointer transition duration-200
 }
 
 
 
 
-.login_btn{
-    @apply bg-title-color py-3 w-full rounded-xl text-2xl font-serif border-2 border-title-color font-semibold tracking-wider text-white transition duration-200
-    hover:bg-btn-color1 hover:text-white 
+.login_btn {
+    @apply bg-title-color py-3 w-full rounded-xl text-2xl font-serif border-2 border-title-color font-semibold tracking-wider text-white transition duration-200 hover:bg-btn-color1 hover:text-white
 }
 
-.label_style{
+.label_style {
     @apply text-lg font-open text-slate-600 font-medium
 }
+
 .social_btn {
     @apply w-full border-2 border-slate-300 py-2 text-2xl rounded-xl font-open font-semibold tracking-wide hover:opacity-75
 }
