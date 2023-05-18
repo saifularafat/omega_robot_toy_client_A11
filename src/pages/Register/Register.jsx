@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
 import Social from "../Login/Social";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Register = () => {
     const { createUser } = useContext(AuthContext)
+
+    const [showPass, setShowPass] = useState(false)
 
     const handlerSubmit = e => {
         e.preventDefault();
@@ -17,6 +19,45 @@ const Register = () => {
         const confirm = from.confirm.value;
         const checkbox = from.checkbox.value;
         console.log(name, photo, email, password, confirm, checkbox);
+
+        // * validation password
+        if (password !== confirm) {
+            return Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: "Don't Match Password",
+            })
+        }
+        // if (!/(?=.*?[A-Z])/.test(password)) {
+        //     return Swal.fire({
+        //         icon: 'error',
+        //         title: 'Oops...',
+        //         text: "please  at least one Capital letter!",
+        //     })
+        // }
+        // else if (!/(?=.*?[0-9])/.test(password)) {
+        //     return Swal.fire({
+        //         icon: 'error',
+        //         title: 'Oops...',
+        //         text: "please add by two number.!",
+        //     })
+        // }
+        // else if (!/(?=.*?[#?!@$%^&*-])/.test(password)) {
+        //     return Swal.fire({
+        //         icon: 'error',
+        //         title: 'Oops...',
+        //         text: "please at least one special symbol.!",
+        //     })
+        // }
+        else if (password.length < 6) {
+            return Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: "please your password by 6 Characters.!",
+            })
+        }
+
+        
 
         createUser(email, password)
             .then(result => {
@@ -104,7 +145,7 @@ const Register = () => {
                                 </span>
                             </label>
                             <input
-                                type="password"
+                                type={showPass ? "text" : "password"}
                                 name="password"
                                 required
                                 placeholder="password"
@@ -122,14 +163,22 @@ const Register = () => {
                                 </span>
                             </label>
                             <input
-                                type="confirm"
+                                type={showPass ? "text" : "password"}
                                 name="confirm"
                                 required
                                 placeholder="Confirm password"
                                 className="input input-bordered" />
                         </div>
 
-                        <p className="label_style mt-1">Show password</p>
+                        <p
+                            onClick={() => setShowPass(!showPass)}
+                            className="label_style mt-1">
+                            {
+                                showPass ? <span>Hide password</span>
+                                    : <span>Show password</span>
+                            }
+
+                        </p>
 
                         <label className=" inline-flex mt-2">
                             <input
