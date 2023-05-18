@@ -7,13 +7,18 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        'open': ['Open Sans', 'sans-serif'],
+        'Lobster': ['Lobster', 'cursive'],
       },
       colors: {
-        // 'navber': '#4285F4',
-        // 'text': '#333333',
-        // 'title': '#FF5722',
-        // 'color-bg': '#E0E0E0'
+        'linear': '#FF0000, #FF8938',
+        'text': 'rgba(87, 118, 57, 0.1)',
+        'title': '#FF3811',
+        'color-bg': '#E0E0E0'
       },
+      animation: {
+        wiggle: 'wiggle 1s ease-in-out infinite',
+      }
     },
   },
   plugins: [require("daisyui")],

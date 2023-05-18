@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.my_container{
+    @apply max-w-6xl mx-auto
+}
+
+.active{
+    @apply bg-gradient-to-r from-[#FF0000] to-[#FF8938] animate-wiggle py-3 px-4 
+    text-xl font-open font-semibold text-white rounded-lg 
+    tracking-wide transition duration-200
+}
+.default{
+    @apply bg-transparent text-xl text-title font-open font-semibold tracking-wide py-3 px-4
+    rounded-lg
+
+}
