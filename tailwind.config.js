@@ -11,9 +11,11 @@ export default {
         'Lobster': ['Lobster', 'cursive'],
       },
       colors: {
-        'linear': '#FF0000, #FF8938',
-        'text': 'rgba(87, 118, 57, 0.1)',
-        'title': '#FF3811',
+        'btn-color2': '#FF8938',
+        'btn-color1': '#FF0000',
+        'description-color': '#737373',
+        'service-title': '#444444',
+        'title-color': '#FF3811',
         'color-bg': '#E0E0E0'
       },
       animation: {
