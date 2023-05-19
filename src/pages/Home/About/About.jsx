@@ -21,7 +21,7 @@ const About = () => {
 
                 <div className='grid md:grid-cols-2'>
                     <div
-                        data-aos="fade-down-right"
+                        data-aos="fade-up"
                         data-aos-duration="1500"
                     >
                         <img src={robot6} alt=""
@@ -29,7 +29,7 @@ const About = () => {
                     </div>
 
                     <div
-                        data-aos="fade-down-left"
+                        data-aos="fade-down"
                         data-aos-duration="1500"
                         className='relative mt-12 md:ml-10'>
                         <div className='md:flex flex-row-reverse justify-around'>

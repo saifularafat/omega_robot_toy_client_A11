@@ -34,6 +34,13 @@
     @apply text-2xl text-title-color font-Lobster font-semibold
 }
 
+/* sub category style */
+.sub_title {
+    @apply text-2xl font-serif font-semibold text-service-title 
+}
+.sub_desc{
+    @apply text-left text-xl font-open font-semibold text-slate-700
+}
 /* Add A Toy style */
 .label_style {
     @apply text-xl font-sans font-medium text-description-color pb-1 tracking-wide
