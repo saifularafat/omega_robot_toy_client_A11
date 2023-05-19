@@ -31,10 +31,13 @@
 }
 
 .sub_nav {
-    @apply text-2xl text-title-color font-Lobster font-semibold tracking-wide
+    @apply text-2xl text-title-color font-Lobster font-semibold
 }
 
-
+/* Add A Toy style */
+.label_style {
+    @apply text-xl font-sans font-medium text-description-color pb-1 tracking-wide
+}
 .login_btn {
     @apply bg-title-color py-3 w-full rounded-xl text-2xl font-serif border-2 border-title-color font-semibold tracking-wider text-white transition duration-200 hover:bg-btn-color1 hover:text-white
 }
