@@ -1,5 +1,5 @@
 
-const FightingRobot = () => {
+const FlyingRobot = () => {
     return (
         <div>
             
@@ -7,4 +7,4 @@ const FightingRobot = () => {
     );
 };
 
-export default FightingRobot;
+export default FlyingRobot;

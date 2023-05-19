@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./src/assets/images/logo/robot_logo.png" /> <!-- public -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Omega Robot Kids</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./src/assets/images/logo/robot_logo.png" /> <!-- public -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Omega Robot Kids</title>
+
+  <!-- AOS Animation CSS Link up -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+
+
+  <!-- AOS Animation script Link -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+</body>
+
 </html>

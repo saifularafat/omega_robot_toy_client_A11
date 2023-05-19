@@ -20,16 +20,18 @@
 }
 
 .silder_btn {
-    @apply bg-title-color md:py-2 py-1 md:px-5 px-2 rounded-lg text-white md:border-2 border-title-color md:text-2xl text-xl font-Lobster font-semibold hover:bg-transparent hover:text-yellow-50 tracking-wide transition duration-200
+    @apply bg-title-color md:py-2 py-1 md:px-5 px-2 rounded-lg text-white border-2 border-title-color md:text-2xl text-xl font-Lobster font-semibold hover:bg-transparent hover:text-yellow-50 tracking-wide transition duration-200
 }
 .silder_btn1 {
-    @apply bg-transparent md:py-2 py-1 md:px-5 px-2 rounded-lg text-white md:border-2 border-title-color md:text-2xl text-xl font-Lobster font-semibold hover:bg-title-color hover:text-yellow-50 tracking-wide transition duration-200
+    @apply bg-transparent md:py-2 py-1 md:px-5 px-2 rounded-lg text-white border-2 border-title-color md:text-2xl text-xl font-Lobster font-semibold hover:bg-title-color hover:text-yellow-50 tracking-wide transition duration-200
 }
 .main_btn {
     @apply bg-gradient-to-r from-btn-color1 to-btn-color2 text-2xl py-2 px-6 rounded-lg border border-btn-color2 font-semibold text-white tracking-wide cursor-pointer transition duration-200
 }
 
-
+.sub_nav{
+    @apply text-2xl font-Lobster font-semibold text-btn-color1 tracking-wide
+}
 
 
 .login_btn {
