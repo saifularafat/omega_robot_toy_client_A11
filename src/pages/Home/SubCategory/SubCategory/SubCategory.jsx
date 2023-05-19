@@ -18,7 +18,7 @@ const SubCategory = () => {
             </div>
             <Tabs className='text-center'>
                 <TabList>
-                    <Tab><span className='sub_nav'>Car Robot</span></Tab>
+                    <Tab><span className='sub_nav text_gradient'>Car Robot</span></Tab>
                     <Tab><span className='sub_nav'>Electric Robot</span></Tab>
                     <Tab><span className='sub_nav'>Flying Robot</span></Tab>
                 </TabList>
