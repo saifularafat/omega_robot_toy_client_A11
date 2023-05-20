@@ -1,8 +1,8 @@
-import { Rating } from '@smastrom/react-rating'
-import { Link } from 'react-router-dom';
+import { Rating } from "@smastrom/react-rating";
+import { Link } from "react-router-dom";
 
-const Car = ({ car }) => {
-    const { _id, img, name, price, rating } = car
+const Electric = ({ electric }) => {
+    const { _id, img, name, price, rating } = electric;
     return (
         <div>
             <div
@@ -38,4 +38,4 @@ const Car = ({ car }) => {
     );
 };
 
-export default Car;
+export default Electric;
