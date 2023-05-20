@@ -18,7 +18,7 @@ const Toys = ({ toys }) => {
             <td>{price}</td>
             <td>{quantity ? '' : ' 12 '}</td>
             <th>
-                <Link to={`/:${_id}`}>
+                <Link to={`/details/${_id}`}>
                     <button className="details_btn">Details</button>
                 </Link>
             </th>

@@ -29,7 +29,7 @@ const Flying = ({ flying }) => {
                         </small></p>
                     </div>
                     <div className="text-right">
-                        <Link to={`/:${_id}`}>
+                        <Link to={`/details/${_id}`}>
                             <button className='logout_btn'>View Details</button>
                         </Link>
                     </div>

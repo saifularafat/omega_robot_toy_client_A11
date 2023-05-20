@@ -10,6 +10,7 @@ import LoginLayout from "../layout/LoginLayout";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Terms from "../pages/Terms/Terms";
+import Dynamic from "../Shares/DynamicRout/Dynamic";
 
 const router = createBrowserRouter([
     {
@@ -27,11 +28,14 @@ const router = createBrowserRouter([
                 loader: () => fetch('http://localhost:5000/robotProducts')
             },
             {
-                
+                path: '/details/:id',
+                element: <Dynamic />,
+                // loader: ({ params }) => fetch(`https://y-pearl-eight.vercel.app/robotProducts/${params.id}`)
+                loader: ({ params }) => fetch(`http://localhost:5000/robotProducts/${params.id}`)
             },
             {
-                path:'myToy',
-                element:<MyToy />
+                path: 'myToy',
+                element: <MyToy />
             },
             {
                 path: 'addToy',
