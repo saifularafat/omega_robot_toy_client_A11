@@ -9,12 +9,13 @@ const MyToy = () => {
     const navigate = useNavigate()
 
     const [ myToyRobot, setMyToyRobot ] = useState([])
+    // const url = `https://y-pearl-eight.vercel.app/robotProducts?email=${user?.email}`
     const url = `http://localhost:5000/robotProducts?email=${user?.email}`
     useEffect(() => {
         fetch(url,{
             method: 'GET',
             headers: {
-                'content-type' : 'application/json'
+                authorization: `Bearer ${localStorage.getItem('omega-robot')}`
             },
         })
         .then( res => res.json())
@@ -40,6 +41,7 @@ const MyToy = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
+                // https://y-pearl-eight.vercel.app/robotProducts/${id}
                 fetch(`http://localhost:5000/robotProducts/${id}`, {
                     method: 'DELETE'
                 })
@@ -68,11 +70,11 @@ const MyToy = () => {
                     {/* head */}
                     <thead>
                         <tr>
-                            <th>photo</th>
-                            <th>name</th>
-                            <th>Category</th>
-                            <th>Price</th>
-                            <th>Action</th>
+                            <th className="text-lg font-open">photo</th>
+                            <th className="text-lg font-open">name</th>
+                            <th className="text-lg font-open">Category</th>
+                            <th className="text-lg font-open">Price</th>
+                            <th className="text-lg font-open">Action</th>
                         </tr>
                     </thead>
                     {

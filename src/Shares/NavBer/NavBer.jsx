@@ -97,7 +97,7 @@ const NavBer = () => {
                                                         className='w-12 h-12 rounded-full mr-3' />
                                                     </div>
                                                     :
-                                                    <span><FaUserAlt className='w-9 h-9' /> </span>
+                                                    <span><FaUserAlt className='w-9 h-9 mr-3' /> </span>
                                             }
                                         </span>
                                         <button

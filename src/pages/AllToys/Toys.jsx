@@ -12,11 +12,11 @@ const Toys = ({ toys }) => {
                     </div>
                 </div>
             </td>
-            <td>{sellerName}</td>
-            <td>{name}</td>
-            <td>{category_name}</td>
-            <td>{price}</td>
-            <td>{quantity}</td>
+            <td className="table_body">{sellerName}</td>
+            <td className="table_body">{name}</td>
+            <td className="table_body">{category_name}</td>
+            <td className="table_body">{'$'+ price}</td>
+            <td className="table_body">{quantity}</td>
             <th>
                 <Link to={`/details/${_id}`}>
                     <button className="details_btn">Details</button>

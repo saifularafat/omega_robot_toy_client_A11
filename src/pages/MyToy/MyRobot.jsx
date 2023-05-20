@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 
 const MyRobot = ({ myRobot, handlerDelete }) => {
-    console.log(myRobot);
+    // console.log(myRobot);
     const { _id, img, name, category_name, price } = myRobot
     return (
         <tbody>
@@ -17,21 +17,25 @@ const MyRobot = ({ myRobot, handlerDelete }) => {
                         </div>
                     </div>
                 </td>
-                <td>
+                <td className="text-lg font-open text-black font-medium">
                     {name}
                 </td>
-                <td>{category_name}</td>
-                <td>{price}</td>
+                <td className="text-lg font-open text-black font-medium">
+                    {category_name}
+                </td>
+                <td className="text-lg font-open text-black font-medium">
+                    {price}
+                </td>
                 <td>
-                    <Link to={`/${_id}`}>
+                    <Link to={`/update/${_id}`}>
                         <button
-                        className=""
+                            className="py-2 px-4 bg-blue-500 text-white rounded-xl text-xl font-medium mr-2 "
                         >Edit</button>
                     </Link>
                     <Link>
                         <button
-                        onClick={() => handlerDelete(_id)}
-                        className=""
+                            onClick={() => handlerDelete(_id)}
+                            className="py-2 px-3 bg-red-600 text-white rounded-xl text-xl font-medium"
                         >Delete</button>
                     </Link>
                 </td>
