@@ -73,3 +73,11 @@
 .social_btn {
     @apply w-full border-2 border-slate-300 py-2 text-2xl rounded-xl font-open font-semibold tracking-wide hover:opacity-75
 }
+
+/* footer style */
+.footer_title{
+    @apply text-2xl font-open font-semibold text-slate-500
+}
+.footer_desc{
+    @apply text-lg hover:underline hover:opacity-75
+}

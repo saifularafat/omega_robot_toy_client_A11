@@ -9,25 +9,25 @@ const AddAToy = () => {
         e.preventDefault();
         const form = e.target;
         const name = form.name.value;
-        const sallerName = form.sellerName.value;
+        const sellerName = form.sellerName.value;
         const category_name = form.category_name.value;
         const price = form.price.value;
         const email = form.email.value;
         const number = form.number.value;
         const quantity = form.quantity.value;
         const rating = form.rating.value;
-        const photo = form.photo.value;
+        const img = form.img.value;
         const details = form.details.value;
         const addRobotInfo = {
             name,
-            sallerName,
+            sellerName,
             category_name,
             price,
             email,
             number,
             quantity,
             rating,
-            photo,
+            img,
             details
         }
         console.log(addRobotInfo);
@@ -181,7 +181,7 @@ const AddAToy = () => {
                         </ p>
                         <input
                             type="url"
-                            name="photo"
+                            name="img"
                             required
                             placeholder="Photo Url"
                             className="input w-full"
