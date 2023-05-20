@@ -8,13 +8,13 @@ const About = () => {
         <div className="md:pb-16 pb-9 bg-gradient-to-r from-[#c7dedb] to-[#eed9b4]">
             <div className='my_container'>
                 <div
-                    className='text-center md:pt-20 pt-10 pb-10'>
+                    className='text-center md:pt-20 pt-10 pb-10 mx-2'>
                     <h2
-                        data-aos="fade-right"
-                        className='text-5xl font-Lobster font-semibold pb-3 '>About Us
+                        data-aos="fade-down"
+                        className='md:text-5xl text-3xl font-Lobster font-semibold pb-3 '>About Us
                     </h2>
                     <p
-                        data-aos="fade-left"
+                        data-aos="fade-up"
                         className='md:w-[480px] mx-auto text-lg font-open text-description-color'>The history of robotics for kids can be traced back to the emergence of educational robotics in the late 20th century. Here are some key milestones and developments.
                     </p>
                 </div>
@@ -40,7 +40,7 @@ const About = () => {
                                 <img src={robot4} alt="" className='md:h-64 md:w-full ' />
                             </div>
                         </div>
-                        <h2 className='text-center text-lg text-description-color font-open mt-3'>The Logo programming language, developed by Seymour Papert and his colleagues at MIT in the 1960s, introduced the concept of programming as a tool for children learning.</h2>
+                        <h2 className='text-center text-lg text-description-color font-open mt-3 mx-2'>The Logo programming language, developed by Seymour Papert and his colleagues at MIT in the 1960s, introduced the concept of programming as a tool for children learning.</h2>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import image1 from './../../../assets/images/slider/car_banner.jpg'
 import image2 from './../../../assets/images/slider/robot_banner.jpg'
 import image3 from './../../../assets/images/slider/robot_banner2.jpg'
@@ -11,11 +12,15 @@ const Banner = () => {
                 <h2 className='md:text-5xl text-2xl font-Lobster font-semibold'>Robotics for kids has significantly time.</h2>
                 <p className='md:text-xl font-sans md:block hidden md:'>Robotics for kids is an educational field that introduces children to the concepts of robotics and programming. It aims to develop their problem-solving skills, critical thinking abilities, and creativity through hands-on activities and projects involving robots.
                 </p>
-                <div className='md:flex'  data-aos="fade-down"
+                <div className='md:flex' data-aos="fade-down"
                     data-aos-easing="linear"
                     data-aos-duration="1500">
-                    <button className='silder_btn'>Robot View</button>
-                    <button className='silder_btn1 ml-5 md:block hidden'>Contact Now</button>
+                    <Link to='allToys'>
+                        <button className='silder_btn'>Robot View</button>
+                    </Link>
+                    <Link to=''>
+                        <button className='silder_btn1 ml-5 md:block hidden'>Contact Now</button>
+                    </Link>
                 </div>
             </div>
         </>
@@ -30,8 +35,8 @@ const Banner = () => {
 
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide4" className="btn btn-circle">❮</a>
-                    <a href="#slide2" className="btn btn-circle">❯</a>
+                    <a href="#slide4" className="btn btn-circle sliderArray_btn1">❮</a>
+                    <a href="#slide2" className="btn btn-circle sliderArray_btn2">❯</a>
                 </div>
             </div>
             <div id="slide2" className="carousel-item relative w-full">
@@ -42,8 +47,8 @@ const Banner = () => {
 
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide1" className="btn btn-circle">❮</a>
-                    <a href="#slide3" className="btn btn-circle">❯</a>
+                    <a href="#slide1" className="btn btn-circle sliderArray_btn1">❮</a>
+                    <a href="#slide3" className="btn btn-circle sliderArray_btn2">❯</a>
                 </div>
             </div>
             <div id="slide3" className="carousel-item relative w-full">
@@ -54,8 +59,8 @@ const Banner = () => {
 
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide2" className="btn btn-circle">❮</a>
-                    <a href="#slide4" className="btn btn-circle">❯</a>
+                    <a href="#slide2" className="btn btn-circle sliderArray_btn1">❮</a>
+                    <a href="#slide4" className="btn btn-circle sliderArray_btn2">❯</a>
                 </div>
             </div>
             <div id="slide4" className="carousel-item relative w-full">
@@ -66,8 +71,8 @@ const Banner = () => {
 
                 </div>
                 <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                    <a href="#slide3" className="btn btn-circle">❮</a>
-                    <a href="#slide1" className="btn btn-circle">❯</a>
+                    <a href="#slide3" className="btn btn-circle sliderArray_btn1">❮</a>
+                    <a href="#slide1" className="btn btn-circle sliderArray_btn2">❯</a>
                 </div>
             </div>
         </div>

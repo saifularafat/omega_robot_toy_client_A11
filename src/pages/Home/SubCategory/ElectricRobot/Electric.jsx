@@ -8,7 +8,7 @@ const Electric = ({ electric }) => {
             <div
                 data-aos="zoom-in-down"
                 data-aos-duration="1500"
-                className="card w-96 h-fit bg-base-100 shadow-xl">
+                className="card md:w-96 mx-3 h-fit bg-base-100 shadow-xl">
                 <figure>
                     <img src={img} alt="robot" className="md:h-72" />
                 </figure>
@@ -27,7 +27,7 @@ const Electric = ({ electric }) => {
 
                         </small></p>
                     </div>
-                    <div className="text-right">
+                    <div className="md:text-right text-center">
                     <Link to={`/details/${_id}`}>
                             <button className='logout_btn'>View Details</button>
                         </Link>

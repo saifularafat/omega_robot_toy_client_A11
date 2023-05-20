@@ -89,7 +89,7 @@ const Register = () => {
                     <h1 className="text-5xl font-bold my-6">Register now!</h1>
 
                 </div>
-                <div className="card flex-shrink-0 md:w-[540px] w-full mx-4 shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 md:w-[540px] w-full md:mx-4 shadow-2xl bg-base-100">
                     <form onSubmit={handlerSubmit}
                         className="card-body">
                         <div className="form-control">
@@ -185,12 +185,12 @@ const Register = () => {
                                 type="checkbox"
                                 name="checkbox"
                                 required className="checkbox" />
-                            <p className='pl-5 text-xl font-open'>Accept
-                                <Link to='/terms' className='text-blue-600 underline pl-2'>Terms and Condition
+                            <p className='md:pl-5 pl-1 md:text-xl font-open'>Accept
+                                <Link to='/terms' className='text-blue-600 underline md:pl-2'>Terms and Condition
                                 </Link>
                             </p>
                         </label>
-                        <div className=" mt-6">
+                        <div className="mt-6">
                             <button
                                 className="login_btn ">
                                 Register

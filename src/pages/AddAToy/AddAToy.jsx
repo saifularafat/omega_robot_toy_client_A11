@@ -1,6 +1,9 @@
+import { useContext } from "react";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const AddAToy = () => {
+    const { user } = useContext( AuthContext )
 
     const handlerAddRobotSubmit = e => {
         e.preventDefault();
@@ -52,10 +55,9 @@ const AddAToy = () => {
     return (
         <div className="bg-orange-300 md:p-10">
             <div
-                data-aos="fade-down"
+                data-aos="fade-right"
                 data-aos-duration="1500"
-                data-aos-anchor-placement="bottom-center"
-                className="text-center">
+                className="text-center pt-5">
                 <h2 className="font-Lobster font-bold text-3xl pb-3">ADD TOY</h2>
                 <p className="text-2xl text-description-color font-open">Please Add Your toy information</p>
             </div>
@@ -85,6 +87,7 @@ const AddAToy = () => {
                                 type="text"
                                 name="sellerName"
                                 placeholder="Your Name"
+                                defaultValue={user?.displayName}
                                 required
                                 className="input w-full"
                             />
@@ -127,6 +130,7 @@ const AddAToy = () => {
                             <input
                                 type="email"
                                 name="email"
+                                defaultValue={user?.email}
                                 placeholder="Seller Email"
                                 required
                                 className="input w-full"
@@ -198,7 +202,8 @@ const AddAToy = () => {
                     <input
                         data-aos="zoom-in"
                         data-aos-duration="1000"
-                        type="submit" value="Add Toy" className="bg-red-500 w-full py-3 text-white rounded-xl cursor-pointer mb-7" />
+                        type="submit" value="Add Toy" className="addToy_btn" 
+                        />
                 </form>
             </div>
         </div>

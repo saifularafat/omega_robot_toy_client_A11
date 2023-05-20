@@ -21,6 +21,15 @@
 .silder_btn {
     @apply bg-title-color md:py-2 py-1 md:px-5 px-2 rounded-lg text-white border-2 border-title-color md:text-2xl text-xl font-Lobster font-semibold hover:bg-transparent hover:text-yellow-50 tracking-wide transition duration-200
 }
+.sliderArray_btn1{
+    @apply bg-btn-color1 text-white border-btn-color1
+    hover:bg-btn-color1 hover:border-btn-color1
+}
+
+.sliderArray_btn2{
+    @apply bg-title-color text-white border-title-color
+        hover:bg-title-color hover:border-title-color
+}
 
 .silder_btn1 {
     @apply bg-transparent md:py-2 py-1 md:px-5 px-2 rounded-lg text-white border-2 border-title-color md:text-2xl text-xl font-Lobster font-semibold hover:bg-title-color hover:text-yellow-50 tracking-wide transition duration-200
@@ -49,6 +58,9 @@
 /* Add A Toy style */
 .label_style {
     @apply text-xl font-sans font-medium text-description-color pb-1 tracking-wide
+}
+.addToy_btn {
+    @apply bg-red-500 text-2xl font-Lobster font-bold tracking-wide w-full py-3 hover:bg-opacity-80 transition duration-200 text-white rounded-xl cursor-pointer mb-7
 }
 .login_btn {
     @apply bg-title-color py-3 w-full rounded-xl text-2xl font-serif border-2 border-title-color font-semibold tracking-wider text-white transition duration-200 hover:bg-btn-color1 hover:text-white
