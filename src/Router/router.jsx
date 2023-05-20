@@ -22,7 +22,12 @@ const router = createBrowserRouter([
             },
             {
                 path: 'allToys',
-                element: <AllToys />
+                element: <AllToys />,
+                // loader: () => fetch('https://y-pearl-eight.vercel.app/robotProducts')
+                loader: () => fetch('http://localhost:5000/robotProducts')
+            },
+            {
+                
             },
             {
                 path:'myToy',

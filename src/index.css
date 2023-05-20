@@ -41,6 +41,11 @@
 .sub_desc{
     @apply text-left text-xl font-open font-semibold text-slate-700
 }
+
+/* All toy Button */
+.details_btn {
+    @apply bg-btn-color1 py-2 px-5 border-2 rounded-xl font-Lobster font-semibold text-xl text-white hover:bg-transparent hover:text-btn-color1 hover:border-2 hover:border-btn-color1 transition duration-200
+}
 /* Add A Toy style */
 .label_style {
     @apply text-xl font-sans font-medium text-description-color pb-1 tracking-wide

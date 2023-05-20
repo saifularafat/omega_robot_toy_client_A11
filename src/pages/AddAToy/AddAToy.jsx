@@ -19,7 +19,7 @@ const AddAToy = () => {
                         data-aos-duration="1500"
                         className="md:flex">
                         <div className="md:w-1/2">
-                            <p className="label_style">Name
+                            <p className="label_style">Product Name
                             </ p>
                             <input
                                 type="text"
@@ -34,7 +34,7 @@ const AddAToy = () => {
                             </ p>
                             <input
                                 type="text"
-                                name="seller"
+                                name="sellerName"
                                 placeholder="Your Name"
                                 required
                                 className="input w-full"
@@ -50,7 +50,7 @@ const AddAToy = () => {
                             </ p>
                             <input
                                 type="text"
-                                name="quantity"
+                                name="category_name"
                                 placeholder="Toy Category"
                                 required
                                 className="input w-full"
@@ -77,7 +77,7 @@ const AddAToy = () => {
                             </ p>
                             <input
                                 type="email"
-                                name="quantity"
+                                name="email"
                                 placeholder="Seller Email"
                                 required
                                 className="input w-full"
@@ -98,12 +98,12 @@ const AddAToy = () => {
                         data-aos="zoom-in"
                         data-aos-duration="1000" className="md:flex">
                         <div className="md:w-1/2">
-                            <p className="label_style">Available
+                            <p className="label_style">Available Quantity
                             </ p>
                             <input
-                                type="email"
-                                name="available"
-                                placeholder="Available Toy"
+                                type="text"
+                                name="quantity"
+                                placeholder="Available Quantity"
                                 required
                                 className="input w-full"
                             />
