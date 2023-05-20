@@ -14,70 +14,72 @@ import img12 from './../../../assets/images/gallery/gallery-12.avif'
 
 const Gallery = () => {
     return (
-        <div className='my_container mb-20'>
-            <div className='text-center mt-20 mb-10'>
-                <h2 data-aos="fade-right"
-                className='text-5xl font-Lobster font-semibold pb-3'>Our Gallery </h2>
-                <p data-aos="fade-left" 
-                className='md:w-[480px] mx-auto text-lg font-open text-description-color'>The history of robotics for kids can be traced back to the emergence of educational robotics in the late 20th century. Here are some key milestones and developments</p>
-            </div>
-            <div>
-                <div className="grid md:grid-cols-4 grid-cols-2 gap-5">
-                    {/* first column */}
-                    <div data-aos="flip-left"
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img1} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    <div data-aos="flip-left"
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img2} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    <div data-aos="flip-left"
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img3} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    <div data-aos="flip-left"
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img4} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    {/* second column */}
-                    <div data-aos="zoom-in-up" 
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img5} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    <div data-aos="zoom-in-up" 
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img6} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    <div data-aos="zoom-in-up" 
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img7} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    <div data-aos="zoom-in-up" 
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img8} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    {/* three column */}
-                    <div data-aos="flip-left" 
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img10} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    <div data-aos="flip-left" 
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img11} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    <div data-aos="flip-left" 
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img12} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    <div data-aos="flip-left" 
-                    className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                        <img src={img9} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
-                    </div>
-                    
+        <div className='bg-gradient-to-r from-[#eed9b4] to-[#c7dedb]'>
+            <div className='my_container md:pb-20 pb-10'>
+                <div className='text-center md:pt-20 pt-10 mb-10'>
+                    <h2 data-aos="fade-right"
+                        className='text-5xl font-Lobster font-semibold pb-3'>Our Gallery </h2>
+                    <p data-aos="fade-left"
+                        className='md:w-[480px] mx-auto text-lg font-open text-description-color'>The history of robotics for kids can be traced back to the emergence of educational robotics in the late 20th century. Here are some key milestones and developments</p>
                 </div>
-            </div>
+                <div>
+                    <div className="grid md:grid-cols-4 grid-cols-2 gap-5">
+                        {/* first column */}
+                        <div data-aos="flip-left"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img1} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        <div data-aos="flip-left"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img2} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        <div data-aos="flip-left"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img3} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        <div data-aos="flip-left"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img4} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        {/* second column */}
+                        <div data-aos="zoom-in-up"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img5} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        <div data-aos="zoom-in-up"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img6} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        <div data-aos="zoom-in-up"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img7} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        <div data-aos="zoom-in-up"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img8} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        {/* three column */}
+                        <div data-aos="flip-left"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img10} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        <div data-aos="flip-left"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img11} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        <div data-aos="flip-left"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img12} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
+                        <div data-aos="flip-left"
+                            className="shadow-2xl rounded-xl bg-slate-100 p-2">
+                            <img src={img9} alt="Robot" className='md:h-44 md:w-80 rounded-xl' />
+                        </div>
 
+                    </div>
+                </div>
+
+            </div>
         </div>
     );
 };

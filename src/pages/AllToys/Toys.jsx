@@ -12,7 +12,7 @@ const Toys = ({ toys }) => {
                     </div>
                 </div>
             </td>
-            <td>{sellerName? {sellerName} : 'saiful' }</td>
+            <td>{sellerName}</td>
             <td>{name}</td>
             <td>{category_name}</td>
             <td>{price}</td>

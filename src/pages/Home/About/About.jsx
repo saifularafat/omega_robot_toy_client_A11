@@ -5,10 +5,10 @@ import robot6 from './../../../assets/images/about/robot_about.png'
 
 const About = () => {
     return (
-        <div className=' mb-16'>
+        <div className="md:pb-16 pb-9 bg-gradient-to-r from-[#c7dedb] to-[#eed9b4]">
             <div className='my_container'>
                 <div
-                    className='text-center mt-20 mb-10'>
+                    className='text-center md:pt-20 pt-10 pb-10'>
                     <h2
                         data-aos="fade-right"
                         className='text-5xl font-Lobster font-semibold pb-3 '>About Us

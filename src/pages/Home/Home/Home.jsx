@@ -9,6 +9,7 @@ const Home = () => {
             <Banner />
             <About />
             <Gallery />
+            {/* slider banate hobe */}
             <SubCategory />
         </div>
     );

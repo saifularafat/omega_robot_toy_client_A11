@@ -7,8 +7,8 @@ import FlyingRobot from '../FlyingRobot/FlyingRobot';
 
 const SubCategory = () => {
     return (
-        <div className='pb-16 bg-slate-200'>
-            <div className='text-center mt-20 mb-10'>
+        <div className=" pb-16 bg-gradient-to-r from-[#c7dedb] to-[#eed9b4]">
+            <div className='text-center md:pt-20 pt-10 mb-10'>
                 <h2
                     data-aos="fade-right"
                     className='text-5xl font-Lobster font-semibold pb-3'>Sub Category

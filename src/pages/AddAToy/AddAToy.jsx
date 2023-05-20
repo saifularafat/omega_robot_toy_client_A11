@@ -1,5 +1,54 @@
+import Swal from "sweetalert2";
 
 const AddAToy = () => {
+
+    const handlerAddRobotSubmit = e => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const sallerName = form.sellerName.value;
+        const category_name = form.category_name.value;
+        const price = form.price.value;
+        const email = form.email.value;
+        const number = form.number.value;
+        const quantity = form.quantity.value;
+        const rating = form.rating.value;
+        const photo = form.photo.value;
+        const details = form.details.value;
+        const addRobotInfo = {
+            name,
+            sallerName,
+            category_name,
+            price,
+            email,
+            number,
+            quantity,
+            rating,
+            photo,
+            details
+        }
+        console.log(addRobotInfo);
+        fetch('http://localhost:5000/robotProducts', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(addRobotInfo)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.insertedId) {
+                    Swal.fire({
+                        position: 'top-center',
+                        icon: 'success',
+                        title: 'Your Robot Add Successful',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+                }
+            })
+    }
     return (
         <div className="bg-orange-300 md:p-10">
             <div
@@ -12,7 +61,7 @@ const AddAToy = () => {
             </div>
             <div
                 className="my_container mt-8">
-                <form
+                <form onSubmit={handlerAddRobotSubmit}
                     className="space-y-5 mx-2">
                     <div
                         data-aos="zoom-in"
@@ -129,8 +178,8 @@ const AddAToy = () => {
                         <input
                             type="url"
                             name="photo"
-                            readOnly
-                            placeholder="Toy Rating"
+                            required
+                            placeholder="Photo Url"
                             className="input w-full"
                         />
                     </div>
@@ -138,7 +187,11 @@ const AddAToy = () => {
                         data-aos="zoom-in"
                         data-aos-duration="1000"
                         className=" md:w-full">
-                        <textarea rows={3} placeholder="Description"
+                        <textarea
+                            rows={3}
+                            required
+                            name="details"
+                            placeholder="Description"
                             className="w-full p-3 rounded-xl"></textarea>
                     </div>
 

@@ -13,7 +13,7 @@ export default {
       colors: {
         'btn-color2': '#FF8938',
         'btn-color1': '#FF0000',
-        'description-color': '#737373',
+        'description-color': '#363434',
         'service-title': '#151515',
         'title-color': '#FF3811',
         'color-bg': '#E0E0E0'
