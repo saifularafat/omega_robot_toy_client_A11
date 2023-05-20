@@ -3,6 +3,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import CarRobot from '../CarRobot/CarRobot';
 import ElectricRobot from '../ElectricRobot/ElectricRobot';
+import FlyingRobot from '../FlyingRobot/FlyingRobot';
 
 const SubCategory = () => {
     return (
@@ -34,7 +35,7 @@ const SubCategory = () => {
                             <ElectricRobot />
                         </TabPanel>
                         <TabPanel>
-                            <h2>Any content 3</h2>
+                            <FlyingRobot />
                         </TabPanel>
                     </div>
                 </Tabs>
