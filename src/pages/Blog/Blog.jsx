@@ -1,5 +1,7 @@
+import useTitle from "../../hooks/useTitle";
 
 const Blog = () => {
+    useTitle('Blog -')
     return (
         <div>
             <div className="bg-gradient-to-r from-[#92d4c5] to-[#d3c575] p-10">

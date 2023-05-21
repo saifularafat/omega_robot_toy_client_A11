@@ -24,7 +24,7 @@ const MyRobot = ({ myRobot, handlerDelete }) => {
                     {category_name}
                 </td>
                 <td className="text-lg font-open text-black font-medium">
-                    {price}
+                    {'$'+ price}
                 </td>
                 <td>
                     <Link to={`/update/${_id}`}>

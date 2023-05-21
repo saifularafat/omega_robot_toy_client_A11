@@ -3,10 +3,13 @@ import MyRobot from "./MyRobot";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
+import useTitle from "../../hooks/useTitle";
 
 const MyToy = () => {
     const { user } = useContext(AuthContext)
-    const navigate = useNavigate()
+    const navigate = useNavigate();
+
+    useTitle('MyToy -')
 
     const [ myToyRobot, setMyToyRobot ] = useState([])
     // const url = `https://y-pearl-eight.vercel.app/robotProducts?email=${user?.email}`

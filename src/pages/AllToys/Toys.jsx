@@ -1,10 +1,11 @@
 import { Link } from "react-router-dom";
 
-const Toys = ({ toys }) => {
-    console.log(toys);
-    const { _id, img, sellerName, name, category_name, price, quantity, } = toys
+const Toys = ({ toys, index }) => {
+    // console.log(toys);
+    const { _id, img, sellerName, name, category_name, price, quantity } = toys
     return (
         <tr>
+            <td className="table_body">{index + 1}</td>
             <td>
                 <div className="avatar">
                     <div className="mask mask-squircle w-24 h-24">
