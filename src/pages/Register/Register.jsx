@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import Social from "../Login/Social";
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -57,12 +57,13 @@ const Register = () => {
             })
         }
 
-        
+
 
         createUser(email, password)
             .then(result => {
                 const createAccount = result.user;
                 console.log(createAccount);
+                <Navigate to='/login'></Navigate>
                 from.reset();
                 Swal.fire({
                     position: 'top-center',
@@ -83,7 +84,7 @@ const Register = () => {
 
     }
     return (
-        <div className="hero min-h-screen bg-gradient-to-r from-slate-500 to-gray-200">
+        <div className="hero min-h-screen bg-gradient-to-r from-slate-100 to-gray-200">
             <div className="">
                 <div className="text-center">
                     <h1 className="text-5xl font-bold my-6">Register now!</h1>

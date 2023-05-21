@@ -13,13 +13,13 @@ const Dynamic = () => {
                     </figure>
                     <div className="card-body">
                         <h2 className=" text-3xl font-Lobster font-bold">Seller Name :<span>{sellerName ? '' : 'Saiful'}</span></h2>
-                        <h2>Robot Name: <span>{name}</span></h2>
-                        <h2>Email: <span>{email ? '' : 'saifularafat.info@gmail.com'}</span></h2>
-                        <h2>Category: <span>{category_name}</span></h2>
-                        <p>Available Quantity: <span>{quantity}</span></p>
-                        <p>Price: <span>{'$' + price}</span></p>
-                        <p>Price: <span>{rating}</span></p>
-                        <p>Details: <span>{details}</span></p>
+                        <h2 className="details_title">Robot Name: <span className="text-btn-color2 font-bold">{name}</span></h2>
+                        <h2 className="details_title">Email: <span className="text-slate-700 font-bold">{email}</span></h2>
+                        <h2 className="details_title">Category: <span className="text-slate-700 font-bold">{category_name}</span></h2>
+                        <p className="details_title">Available Quantity: <span className="text-slate-700 font-bold">{quantity}p.</span></p>
+                        <p className="details_title">Price: <span className="text-slate-700 font-bold">{'$' + price}</span></p>
+                        <p className="details_title">Price: <span className="text-slate-700 font-bold">{rating}</span></p>
+                        <p className="text-lg font-open font-medium text-slate-500">Details: <span>{details}</span></p>
 
                     </div>
                 </div>

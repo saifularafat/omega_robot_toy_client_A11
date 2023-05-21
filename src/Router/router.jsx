@@ -12,6 +12,7 @@ import Register from "../pages/Register/Register";
 import Terms from "../pages/Terms/Terms";
 import Dynamic from "../Shares/DynamicRout/Dynamic";
 import Update from "../pages/MyToy/Update";
+import PrivateRouter from "../PrivateRouter/PrivateRouter";
 
 const router = createBrowserRouter([
     {
@@ -30,7 +31,10 @@ const router = createBrowserRouter([
             },
             {
                 path: '/details/:id',
-                element: <Dynamic />,
+                // element: <Dynamic />,
+                element: <PrivateRouter>
+                    <Dynamic />
+                </PrivateRouter>,
                 // loader: ({ params }) => fetch(`https://y-pearl-eight.vercel.app/robotProducts/${params.id}`)
                 loader: ({ params }) => fetch(`http://localhost:5000/robotProducts/${params.id}`)
             },
@@ -41,11 +45,15 @@ const router = createBrowserRouter([
             },
             {
                 path: 'myToy',
-                element: <MyToy />
+                // element: <MyToy />
+                element: <PrivateRouter>
+                    <MyToy />
+                </PrivateRouter>
             },
             {
                 path: 'addToy',
-                element: <AddAToy />
+                // element: <AddAToy />
+                element: <PrivateRouter> <AddAToy /> </PrivateRouter>
             },
             {
                 path: 'blog',

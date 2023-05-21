@@ -61,6 +61,11 @@
 .table_body {
     @apply text-gray-600 text-lg font-medium
 }
+/* dynamic toy details */
+.details_title{
+    @apply text-xl font-open font-medium text-slate-500
+}
+
 /* Add A Toy style */
 .label_style {
     @apply text-xl font-sans font-medium text-description-color pb-1 tracking-wide
@@ -86,4 +91,9 @@
 }
 .footer_desc{
     @apply text-lg hover:underline hover:opacity-75
+}
+
+.terms_btn{
+    @apply py-3 px-6 text-2xl font-Lobster font-semibold border
+    rounded-xl bg-gradient-to-r from-btn-color1 to-btn-color2  text-white hover:border-btn-color1 hover:text-white transition duration-200
 }

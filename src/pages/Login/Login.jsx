@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import img from './../../assets/images/logo/login.svg'
 import Social from "./Social";
 import { useContext } from "react";
@@ -8,19 +8,31 @@ import Swal from "sweetalert2";
 
 
 const Login = () => {
-    const { signIn } = useContext(AuthContext);
+    const { signIn, loading } = useContext(AuthContext);
+
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    let from = location.state?.from?.pathname || '/';
+
+    if (loading) {
+        return <progress className="progress w-56 mx-auto"></progress>
+    }
 
     const handlerLogin = e => {
-        e.preventDefault(); 
-        const from = e.target;
-        const email = from.email.value;
-        const password = from.password.value;
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
         console.log(email, password);
 
         signIn(email, password)
             .then(result => {
                 const logged = result.user;
                 console.log(logged);
+
+                navigate(from, { replace: true })
+
                 Swal.fire({
                     position: 'top-center',
                     icon: 'success',
