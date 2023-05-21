@@ -26,33 +26,28 @@ const router = createBrowserRouter([
             {
                 path: 'allToys',
                 element: <AllToys />,
-                // loader: () => fetch('https://y-pearl-eight.vercel.app/robotProducts')
-                loader: () => fetch('http://localhost:5000/robotProducts')
+                loader: () => fetch('https://y-pearl-eight.vercel.app/robotProducts')
             },
             {
                 path: '/details/:id',
-                // element: <Dynamic />,
                 element: <PrivateRouter>
                     <Dynamic />
                 </PrivateRouter>,
-                // loader: ({ params }) => fetch(`https://y-pearl-eight.vercel.app/robotProducts/${params.id}`)
-                loader: ({ params }) => fetch(`http://localhost:5000/robotProducts/${params.id}`)
+                loader: ({ params }) => fetch(`https://y-pearl-eight.vercel.app/robotProducts/${params.id}`)
             },
             {
                 path: '/update/:id',
                 element: <Update />,
-                loader: ({ params }) => fetch(`http://localhost:5000/robotProducts/${params.id}`)
+                loader: ({ params }) => fetch(`https://y-pearl-eight.vercel.app/robotProducts/${params.id}`)
             },
             {
                 path: 'myToy',
-                // element: <MyToy />
                 element: <PrivateRouter>
                     <MyToy />
                 </PrivateRouter>
             },
             {
                 path: 'addToy',
-                // element: <AddAToy />
                 element: <PrivateRouter> <AddAToy /> </PrivateRouter>
             },
             {

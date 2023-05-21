@@ -5,8 +5,7 @@ const ElectricRobot = () => {
     const [electricRobot, setElectricRobot] = useState([]);
 
     useEffect(() => {
-        // https://y-pearl-eight.vercel.app/electricRobot
-        fetch('http://localhost:5000/electricRobot')
+        fetch('https://y-pearl-eight.vercel.app/electricRobot')
             .then(res => res.json())
             .then(data => setElectricRobot(data))
     }, [])

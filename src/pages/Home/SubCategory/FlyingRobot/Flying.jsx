@@ -1,4 +1,3 @@
-import { Rating } from "@smastrom/react-rating";
 import { Link } from "react-router-dom";
 
 const Flying = ({ flying }) => {
@@ -19,14 +18,10 @@ const Flying = ({ flying }) => {
                     </h2>
                     <p className="sub_desc"><small>Price: <span className="text-3xl">${price}</span></small></p>
                     <div className='flex'>
-                        <p className="sub_desc"><small className=''>Rating:
-                            <Rating
-                                style={{ maxWidth: 25 }}
-                                value={Math.round(rating || 0)}
-                                readOnly
-                            />
-
-                        </small></p>
+                        <p className="sub_desc"><small className=''>
+                            Rating: {rating}    
+                        </small>
+                        </p>
                     </div>
                     <div className="md:text-right text-center">
                         <Link to={`/details/${_id}`}>

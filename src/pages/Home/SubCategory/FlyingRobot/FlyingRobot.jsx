@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import Flying from "./Flying";
 
-// http://localhost:5000/flyingRobot
 const FlyingRobot = () => {
     const [ flyingRobot, setFlyingRobot ] = useState([]);
 
     useEffect( () => {
-        fetch('http://localhost:5000/flyingRobot')
+        fetch('https://y-pearl-eight.vercel.app/flyingRobot')
             .then(res => res.json())
             .then(data => setFlyingRobot(data))
     },[])

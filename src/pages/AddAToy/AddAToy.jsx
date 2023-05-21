@@ -33,7 +33,8 @@ const AddAToy = () => {
             details
         }
         console.log(addRobotInfo);
-        fetch('http://localhost:5000/robotProducts', {
+        fetch('https://y-pearl-eight.vercel.app/robotProducts', {
+        // fetch('http://localhost:5000/robotProducts', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

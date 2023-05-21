@@ -11,27 +11,26 @@ const MyToy = () => {
 
     useTitle('MyToy -')
 
-    const [ myToyRobot, setMyToyRobot ] = useState([])
-    // const url = `https://y-pearl-eight.vercel.app/robotProducts?email=${user?.email}`
-    const url = `http://localhost:5000/robotProducts?email=${user?.email}`
+    const [myToyRobot, setMyToyRobot] = useState([])
+    const url = `https://y-pearl-eight.vercel.app/robotProducts?email=${user?.email}`
     useEffect(() => {
-        fetch(url,{
+        fetch(url, {
             method: 'GET',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('omega-robot')}`
             },
         })
-        .then( res => res.json())
-        .then( data => {
-            console.log(data);
-            if(!data.error){
-                setMyToyRobot(data)
-            }
-            else{
-                navigate('/login')
-            }
-        })
-    },[url, navigate])
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (!data.error) {
+                    setMyToyRobot(data)
+                }
+                else {
+                    navigate('/login')
+                }
+            })
+    }, [url, navigate])
 
     const handlerDelete = id => {
         Swal.fire({
@@ -44,8 +43,7 @@ const MyToy = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                // https://y-pearl-eight.vercel.app/robotProducts/${id}
-                fetch(`http://localhost:5000/robotProducts/${id}`, {
+                fetch(`https://y-pearl-eight.vercel.app/robotProducts/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -84,7 +82,7 @@ const MyToy = () => {
                         myToyRobot.map(myRobot => <MyRobot
                             key={myRobot._id}
                             myRobot={myRobot}
-                            handlerDelete = {handlerDelete}
+                            handlerDelete={handlerDelete}
                         ></MyRobot>)
                     }
                 </table>

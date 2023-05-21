@@ -23,7 +23,8 @@ const Update = () => {
             details
         }
 
-        fetch(`http://localhost:5000/robotProducts/${id}`, {
+        fetch(`https://y-pearl-eight.vercel.app/robotProducts/${id}`, {
+        // fetch(`http://localhost:5000/robotProducts/${id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

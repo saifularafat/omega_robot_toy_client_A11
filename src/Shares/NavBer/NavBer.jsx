@@ -94,7 +94,7 @@ const NavBer = () => {
                                                         <img 
                                                         src={user?.photoURL} 
                                                         alt="profile photo"
-                                                        className='w-12 h-12 rounded-full mr-3' />
+                                                        className='w-16 h-16 rounded-full  border-4 border-btn-color2 mr-3' />
                                                     </div>
                                                     :
                                                     <span><FaUserAlt className='w-9 h-9 mr-3' /> </span>

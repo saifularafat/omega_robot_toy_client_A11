@@ -6,25 +6,38 @@ import { useState } from "react";
 const AllToys = () => {
     useTitle('All Toys -')
     const allRobotToys = useLoaderData();
-    const [robotToys, setRobotToys] = useState(allRobotToys)
-    // console.log(allRobotToys);
+    console.log(allRobotToys);
+    const [ robotToys, setRobotToys ] = useState(allRobotToys)
 
     const [searchText, setSearchText] = useState("");
 
     const handlerSearch = () => {
-        fetch(`http://localhost:5000/searchFieldRobot/${searchText}`)
+        fetch(`https://y-pearl-eight.vercel.app/searchFieldRobot/${searchText}`)
             .then(res => res.json())
             .then(data => {
                 setRobotToys(data);
             })
     }
 
+    /* Ascending Descending handler */
+    const handlerAscending = () => {
+        fetch('https://y-pearl-eight.vercel.app/ascendingPrice')
+            .then(res => res.json())
+            .then(data => setRobotToys(data))
+    }
+    const handlerDescending = () => {
+        fetch('https://y-pearl-eight.vercel.app/descendingPrice')
+            .then(res => res.json())
+            .then(data => setRobotToys(data))
+    }
+
+
     return (
         <div className="bg-gradient-to-r from-[#eed9b4] to-[#c7dedb]">
             <div className="my_container py-12">
                 {/* search felid */}
-                <div className="form-control ">
-                    <div className="input-group justify-center mb-8">
+                <div className="md:flex items-center mb-6 justify-between">
+                    <div className="input-group">
                         <input
                             onChange={(e) => setSearchText(e.target.value)}
                             type="text"
@@ -34,6 +47,18 @@ const AllToys = () => {
                             onClick={handlerSearch}
                             className="btn btn-square py-3">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                        </button>
+                    </div>
+                    <div className="flex text-right my-5">
+                        <button
+                            onClick={handlerAscending}
+                            className="btn btn-outline mr-5 text-xl bg-btn-color2 text-white font-semibold">
+                            Ascending
+                        </button>
+                        <button
+                            onClick={handlerDescending}
+                            className="btn btn-outline mr-5 text-xl bg-btn-color1 text-white font-semibold">
+                            Descending
                         </button>
                     </div>
                 </div>

@@ -5,8 +5,7 @@ const CarRobot = () => {
     const [carRobot, setCarRobot] = useState([]);
 
     useEffect(() => {
-        // fetch('https://y-pearl-eight.vercel.app/carRobot')
-        fetch('http://localhost:5000/carRobot')
+        fetch('https://y-pearl-eight.vercel.app/carRobot')
             .then(res => res.json())
             .then(data => setCarRobot(data))
     }, [])

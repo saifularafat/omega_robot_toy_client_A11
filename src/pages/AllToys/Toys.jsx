@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 
 const Toys = ({ toys, index }) => {
-    // console.log(toys);
     const { _id, img, sellerName, name, category_name, price, quantity } = toys
     return (
         <tr>

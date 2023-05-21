@@ -2,6 +2,7 @@ import useTitle from "../../../hooks/useTitle";
 import About from "../About/About";
 import Banner from "../Banner/Banner";
 import Gallery from "../Gallery/Gallery";
+import RobotSlider from "../Robot/RobotSlider";
 import SubCategory from "../SubCategory/SubCategory/SubCategory";
 
 const Home = () => {
@@ -11,7 +12,7 @@ const Home = () => {
             <Banner />
             <About />
             <Gallery />
-            {/* slider banate hobe */}
+            <RobotSlider />
             <SubCategory />
         </div>
     );
