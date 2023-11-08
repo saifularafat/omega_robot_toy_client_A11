@@ -123,7 +123,7 @@ const NavBer = () => {
                     </ul>
                 </nav>
 
-                {/* mobile responsive section start */}
+                {/* mobile responsive section start now */}
                 <div className='md:hidden px-2'>
                     <button
                         title='Open Menu'
