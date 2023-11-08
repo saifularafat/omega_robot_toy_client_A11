@@ -12,14 +12,14 @@ const Dynamic = () => {
                         <img src={img} alt="Album" />
                     </figure>
                     <div className="card-body">
-                        <h2 className=" text-3xl font-Lobster font-bold">Seller Name :<span>{sellerName ? '' : 'Saiful'}</span></h2>
-                        <h2 className="details_title">Robot Name: <span className="text-btn-color2 font-bold">{name}</span></h2>
-                        <h2 className="details_title">Email: <span className="text-slate-700 font-bold">{email}</span></h2>
-                        <h2 className="details_title">Category: <span className="text-slate-700 font-bold">{category_name}</span></h2>
-                        <p className="details_title">Available Quantity: <span className="text-slate-700 font-bold">{quantity}p.</span></p>
-                        <p className="details_title">Price: <span className="text-slate-700 font-bold">{'$' + price}</span></p>
-                        <p className="details_title">Price: <span className="text-slate-700 font-bold">{rating}</span></p>
-                        <p className="text-lg font-open font-medium text-slate-500">Details: <span>{details}</span></p>
+                        <h2 className="md:text-3xl text-2xl font-Lobster font-semibold md:font-bold">Seller Name :{sellerName ? <span className="pl-2 md:text-2xl text-lg font-medium md:font-semibold">{sellerName}</span> : 'Saiful'}</h2>
+                        <h2 className="details_title">Robot Name: <span className="text-orange-700 capitalize font-semibold">{name}</span></h2>
+                        <h2 className="details_title">Email: <span className="text-slate-700 font-normal underline">{email}</span></h2>
+                        <h2 className="details_title">Category: <span className="text-slate-700 font-semibold">{category_name}</span></h2>
+                        <p className="details_title">Available Quantity: <span className="text-slate-700 font-semibold">{quantity}p</span></p>
+                        <p className="details_title">Price: <span className="text-slate-700 font-semibold">{'$' + price}</span></p>
+                        <p className="details_title">Price: <span className="text-slate-700 font-semibold">{rating}</span></p>
+                        <p className="text-lg font-open font-semibold text-slate-500">Details: <span className="text-base font-normal">{details}</span></p>
 
                     </div>
                 </div>

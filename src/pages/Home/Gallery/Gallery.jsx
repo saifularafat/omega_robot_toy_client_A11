@@ -27,53 +27,53 @@ const Gallery = () => {
                         {/* first column */}
                         <div data-aos="flip-left"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img1} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img1} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         <div data-aos="flip-left"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img2} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img2} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         <div data-aos="flip-left"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img3} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img3} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         <div data-aos="flip-left"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img4} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img4} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         {/* second column */}
                         <div data-aos="zoom-in-up"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img5} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img5} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         <div data-aos="zoom-in-up"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img6} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img6} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         <div data-aos="zoom-in-up"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img7} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img7} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         <div data-aos="zoom-in-up"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img8} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img8} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         {/* three column */}
                         <div data-aos="flip-left"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img10} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img10} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         <div data-aos="flip-left"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img11} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img11} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         <div data-aos="flip-left"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img12} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img12} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
                         <div data-aos="flip-left"
                             className="shadow-2xl rounded-xl bg-slate-100 p-2">
-                            <img src={img9} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl' />
+                            <img src={img9} alt="Robot" className='md:h-44 h-full md:w-80 w-full rounded-xl hover:scale-110 transition-all duration-300' />
                         </div>
 
                     </div>

@@ -52,12 +52,12 @@ const AllToys = () => {
                     <div className="flex text-right my-5">
                         <button
                             onClick={handlerAscending}
-                            className="btn btn-outline mr-5 text-xl bg-btn-color2 text-white font-semibold">
+                            className="btn  mr-5 text-xl  font-semibold">
                             Ascending
                         </button>
                         <button
                             onClick={handlerDescending}
-                            className="btn btn-outline mr-5 text-xl bg-btn-color1 text-white font-semibold">
+                            className="btn  mr-5 text-xl font-semibold">
                             Descending
                         </button>
                     </div>

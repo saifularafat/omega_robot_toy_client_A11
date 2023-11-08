@@ -19,11 +19,17 @@
 }
 
 .silder_btn {
-    @apply bg-title-color md:py-2 py-1 md:px-5 px-2 rounded-lg text-white border-2 border-title-color md:text-2xl text-xl font-Lobster font-semibold hover:bg-transparent hover:text-yellow-50 tracking-wide transition duration-200
+    @apply bg-green-500 md:py-2 py-1 md:px-5 px-2 rounded-lg text-white border-2 border-green-500
+    shadow-2xl md:text-2xl text-xl font-Lobster font-semibold 
+    hover:bg-transparent hover:text-yellow-50 tracking-wide transition-all duration-300
 }
 .sliderArray_btn1{
     @apply bg-btn-color1 text-white border-btn-color1
     hover:bg-btn-color1 hover:border-btn-color1
+}
+
+.silder_btn1 {
+    @apply bg-transparent md:py-2 py-1 md:px-5 px-2 rounded-lg text-white border-2 border-green-500 md:text-2xl text-xl font-Lobster font-semibold hover:bg-green-500 hover:text-yellow-50 tracking-wide transition duration-200
 }
 
 .sliderArray_btn2{
@@ -31,16 +37,12 @@
         hover:bg-title-color hover:border-title-color
 }
 
-.silder_btn1 {
-    @apply bg-transparent md:py-2 py-1 md:px-5 px-2 rounded-lg text-white border-2 border-title-color md:text-2xl text-xl font-Lobster font-semibold hover:bg-title-color hover:text-yellow-50 tracking-wide transition duration-200
-}
-
 .main_btn {
     @apply bg-gradient-to-r from-btn-color1 to-btn-color2 text-2xl py-2 px-6 rounded-lg border border-btn-color2 font-semibold text-white tracking-wide cursor-pointer transition duration-200
 }
 
 .sub_nav {
-    @apply text-2xl text-title-color font-Lobster font-semibold
+    @apply text-2xl text-green-600 font-Lobster font-semibold
 }
 
 /* sub category style */
@@ -53,7 +55,7 @@
 
 /* All toy Button */
 .details_btn {
-    @apply bg-btn-color1 py-2 px-5 border-2 rounded-xl font-Lobster font-semibold text-xl text-white hover:bg-transparent hover:text-btn-color1 hover:border-2 hover:border-btn-color1 transition duration-200
+    @apply btn py-2 px-5 border-2 rounded-xl capitalize tracking-wide font-semibold text-xl text-white hover:bg-transparent hover:text-green-600 transition duration-200
 }
 .table_header {
     @apply text-lg text-slate-600
