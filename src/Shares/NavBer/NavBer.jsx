@@ -37,12 +37,12 @@ const NavBer = () => {
         <div className='bg-slate-200 py-2 sticky top-0 z-10'>
             <div className="my_container flex justify-between items-center">
                 <Link to='/'>
-                    <div className=''>
+                    <div className=' flex items-center gap-1'>
                         <img
                             src={logo}
                             alt=""
-                            className='w-36 h-24 md:pl-6' />
-                        <h2 className='mt-0 text-2xl font-Lobster font-bold'>Omega <span className='text-orange-500'>Robot</span></h2>
+                            className='w-28 h-16 md:pl-6' />
+                        <h2 className='mt-0 md:text-2xl text-xl font-Lobster font-bold'>Omega <span className='text-orange-700'>Robot</span></h2>
                     </div>
                 </Link>
                 <nav>
