@@ -4,7 +4,7 @@ import Social from "./Social";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import Swal from "sweetalert2";
-
+import Loading from "../../Shares/Loading";
 
 
 const Login = () => {
@@ -12,11 +12,10 @@ const Login = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
-
-    let from = location.state?.from?.pathname || '/';
+    const from = location.state?.from?.pathname || '/';
 
     if (loading) {
-        return <progress className="progress w-56 mx-auto"></progress>
+        return <Loading />
     }
 
     const handlerLogin = e => {
@@ -29,10 +28,6 @@ const Login = () => {
         signIn(email, password)
             .then(result => {
                 const logged = result.user;
-                console.log(logged);
-
-                navigate(from, { replace: true })
-
                 Swal.fire({
                     position: 'top-center',
                     icon: 'success',
@@ -40,6 +35,7 @@ const Login = () => {
                     showConfirmButton: false,
                     timer: 2000
                 })
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.log(error.message);

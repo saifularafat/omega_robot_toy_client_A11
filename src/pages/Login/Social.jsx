@@ -4,12 +4,22 @@ import { useContext } from 'react';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../../Provider/AuthProvider';
 import Swal from 'sweetalert2';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import Loading from '../../Shares/Loading';
 
 const Social = () => {
     const { socialLogin } = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const githubProvider = new GithubAuthProvider();
+    const { loading } = useContext(AuthContext)
+
+    const location = useLocation();
+    const navigate = useNavigate();
+    const from = location.state?.from?.pathname || "/";
+
+    if (loading) {
+        return <Loading />
+    }
 
     const handlerGoogle = () => {
         socialLogin(googleProvider)
@@ -18,10 +28,11 @@ const Social = () => {
                 Swal.fire({
                     position: 'top-center',
                     icon: 'success',
-                    title: 'Sing In Successfully..',
+                    title: 'login In Success!',
                     showConfirmButton: false,
                     timer: 2500
-                })
+                });
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.error(error.message);
@@ -34,10 +45,11 @@ const Social = () => {
                 Swal.fire({
                     position: 'top-center',
                     icon: 'success',
-                    title: 'Sing In Successfully',
+                    title: 'login In Success!',
                     showConfirmButton: false,
                     timer: 2500
-                })
+                });
+                navigate(from, { replace: true })
             })
             .catch(error => {
                 console.error(error.message);
@@ -59,7 +71,7 @@ const Social = () => {
                 </Link>
                 <Link to=''>
                     <button
-                    onClick={handleGithub}
+                        onClick={handleGithub}
                         className='social_btn flex justify-center items-center mt-3'
                     >
                         <FaGithub className='w-7 h-7' />

@@ -13,6 +13,7 @@ import Terms from "../pages/Terms/Terms";
 import Dynamic from "../Shares/DynamicRout/Dynamic";
 import Update from "../pages/MyToy/Update";
 import PrivateRouter from "../PrivateRouter/PrivateRouter";
+import Loading from "../Shares/Loading";
 
 const router = createBrowserRouter([
     {
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
             {
                 path: 'blog',
                 element: <Blog />
+            },
+            {
+                path: 'loading',
+                element: <Loading />
             },
         ]
     },

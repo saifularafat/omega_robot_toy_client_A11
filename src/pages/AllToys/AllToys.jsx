@@ -1,15 +1,20 @@
 import { useLoaderData } from "react-router-dom";
 import Toys from "./Toys";
 import useTitle from "../../hooks/useTitle";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+import Loading from "../../Shares/Loading";
 
 const AllToys = () => {
     useTitle('All Toys -')
     const allRobotToys = useLoaderData();
-    console.log(allRobotToys);
-    const [ robotToys, setRobotToys ] = useState(allRobotToys)
-
+    const { loading } = useContext(AuthContext);
+    const [robotToys, setRobotToys] = useState(allRobotToys)
     const [searchText, setSearchText] = useState("");
+
+    if (loading) {
+        return <Loading />
+    }
 
     const handlerSearch = () => {
         fetch(`https://y-pearl-eight.vercel.app/searchFieldRobot/${searchText}`)
