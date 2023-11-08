@@ -7,7 +7,7 @@
 }
 
 .active {
-    @apply bg-gradient-to-r from-btn-color1 to-btn-color2 animate-wiggle py-3 px-4 text-xl font-open font-semibold text-white rounded-lg tracking-wide transition duration-200
+    @apply bg-gradient-to-r from-green-700 to-green-500 animate-wiggle py-3 px-4 text-xl font-open font-semibold text-white rounded-lg tracking-wide transition duration-200
 }
 
 .default {
@@ -15,7 +15,7 @@
 }
 
 .logout_btn {
-    @apply text-xl text-white py-2 px-4 border font-open font-semibold rounded-xl bg-gradient-to-r from-btn-color2 to-btn-color1
+    @apply text-xl text-white py-2 px-4 border font-open font-semibold rounded-xl bg-gradient-to-r from-green-700 to-green-400
 }
 
 .silder_btn {
