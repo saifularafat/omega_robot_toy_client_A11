@@ -56,7 +56,7 @@ const AddAToy = () => {
             })
     }
     return (
-        <div className="bg-orange-300 md:p-10">
+        <div className="bg-gray-400 md:p-10">
             <div
                 data-aos="fade-right"
                 data-aos-duration="1500"

@@ -73,14 +73,14 @@
     @apply text-xl font-sans font-medium text-description-color pb-1 tracking-wide
 }
 .addToy_btn {
-    @apply bg-red-500 text-2xl font-Lobster font-bold tracking-wide w-full py-3 hover:bg-opacity-80 transition duration-200 text-white rounded-xl cursor-pointer mb-7
+    @apply bg-red-500 text-2xl font-Lobster font-bold tracking-wide w-full py-3 hover:bg-opacity-80 transition duration-200 text-slate-700 rounded-xl cursor-pointer mb-7
 }
 .login_btn {
     @apply bg-title-color py-3 w-full rounded-xl text-2xl font-serif border-2 border-title-color font-semibold tracking-wider text-white transition duration-200 hover:bg-btn-color1 hover:text-white
 }
 
 .label_style {
-    @apply text-lg font-open text-slate-600 font-medium
+    @apply text-lg font-open text-slate-900 font-medium
 }
 
 .social_btn {
@@ -97,5 +97,5 @@
 
 .terms_btn{
     @apply py-3 px-6 text-2xl font-Lobster font-semibold border
-    rounded-xl bg-gradient-to-r from-btn-color1 to-btn-color2  text-white hover:border-btn-color1 hover:text-white transition duration-200
+    rounded-xl bg-gradient-to-r from-btn-color1 to-btn-color2  text-slate-950 hover:border-btn-color1 hover:text-white transition duration-200
 }
